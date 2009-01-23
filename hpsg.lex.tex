@@ -1,0 +1,80 @@
+\subsection{Les règles lexicales}
+
+\begin{figure}[ht]
+\centering
+\begin{avm}
+  [{}
+    phon	 & </\emph{paul}/> \\
+    synsem &  [{synsem}
+	      local & [{loc}
+			categorie & [{cat}
+				      tete      & nom\\
+				      valence   & [{val}
+						  SPR   & <>\\
+						  SUJ   & <>\\
+						  COMPS & <>\\
+						  ]\\
+				      sous-cat  & <>\\
+				    ]\\
+			contenu   & [{cont}
+				      indice i  & [{}
+						    personne & 3\textsuperscript{ème}\\
+						    nombre   & sing\\
+						    genre    & masc\\
+						  ]\\
+				      restr     & \{ [{}
+						      reln  & nomin\\
+						      nom	  & paul\\
+						      arg	  & i\\
+						     ]\\
+						  \}
+				    ]\\
+		      ]
+	      ]
+  ]
+\end{avm}
+\caption{Entrée lexicale pour \emph{Paul}.\label{lex.paul}}
+\end{figure}
+
+\begin{figure}[ht]
+\centering
+\begin{avm}
+  [{}
+    phon	 & </\emph{faire}/> \\
+    synsem &  [{synsem}
+	      local & [{loc}
+			categorie & [{cat}
+				      tete      & [{}
+						    verbe\\
+						    mode  & indicatif
+						  ]\\
+				      valence   & [{val}
+						  suj   & <SN @{1}>\\
+						  comps & <@{2}, @{3}, @{4}>\\
+						  ]\\
+				      sous-cat  & <SN @{1}, V @{4} [{}
+								trans	  & -\\
+								valence	  & [{val}
+									      suj   & <SN @{3}>\\
+									      comps & @{2}\\
+									    ]\\
+								sous-cat  & @{2}
+							      ], SN[{}\emph{acc}]@{3} >{} $\bigoplus$ @{2} \\
+				    ]\\
+			contenu   & [{cont}
+				      indice    & s\\
+				      restr     & \{ [{}
+						      reln	& cause\\
+						      agent	& i\\
+						      patient	& j\\
+						      resultat	& @{1}
+						     ]\\
+						  \}
+				    ]\\
+		      ]
+	      ]
+  ]
+\end{avm}
+\caption{Entrée lexicale pour \emph{faire} avec complément intransitif.\label{lex.paul}}
+\end{figure}
+
