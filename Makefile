@@ -12,7 +12,7 @@ TEXI2PDF=texi2pdf
 pdf: $(FILENAME).pdf
 
 %.pdf: %.tex $(DEPS_BIB) $(DEPS_TEX) *.tex
-	$(TEXI2PDF) --tidy $<
+	pdflatex $< # $(TEXI2PDF) --tidy $<
 
 clean:
 	$(TEXI2PDF) --mostly-clean $(FILENAME).tex
