@@ -40,7 +40,7 @@
 \centering
 \begin{avm}
   [{}
-    phon	 & </\emph{faire}/> \\
+    phon	 & </\emph{fait}/> \\
     synsem &  [{synsem}
 	      local & [{loc}
 			categorie & [{cat}
@@ -75,14 +75,14 @@
 	      ]
   ]
 \end{avm}
-\caption{Entrée lexicale pour \emph{faire} avec complément intransitif.\label{lex.paul}}
+\caption{Entrée lexicale pour \emph{faire} avec complément intransitif.\label{lex.fairei}}
 \end{figure}
 
 \begin{figure}[ht]
 \centering
 \begin{avm}
   [{}
-    phon	 & </\emph{faire}/> \\
+    phon	 & </\emph{fait}/> \\
     synsem &  [{synsem}
 	      local & [{loc}
 			categorie & [{cat}
@@ -117,6 +117,90 @@
 	      ]
   ]
 \end{avm}
-\caption{Entrée lexicale pour \emph{faire} avec complément transitif.\label{lex.paul}}
+\caption{Entrée lexicale pour \emph{faire} avec complément transitif.\label{lex.fairet}}
 \end{figure}
 
+\begin{figure}[ht]
+\centering
+\begin{avm}
+  [{}
+    phon	 & </\emph{dormir}/> \\
+    synsem &  [{synsem}
+	      local & [{loc}
+			categorie & [{cat}
+				      tete      & [{}
+						    verbe\\
+						    mode  & infinitif
+						  ]\\
+				      valence   & [{val}
+						  suj   & <SN @{1}>\\
+						  comps & <>\\
+						  ]\\
+				      sous-cat  & <SN @{1}>\\
+				    ]\\
+			contenu   & [{cont}
+				      indice    & s\\
+				      restr     & \{ [{}
+						      reln	& cause\\
+						      agent	& i\\
+						      patient	& j\\
+						      resultat	& @{1}
+						     ]\\
+						  \}
+				    ]\\
+		      ]
+	      ]
+  ]
+\end{avm}
+\caption{Entrée lexicale pour \emph{dormir}\label{lex.dormir}}
+\end{figure}
+
+% TODO l'
+% TODO enfant
+% TODO le (pronom)
+% TODO traduire
+% TODO le (déterminant)
+% TODO roman
+% TODO à
+% TODO son
+% TODO fils
+
+
+
+% TODO 5 -> 10
+
+\begin{figure}[ht]
+\centering
+\begin{avm}
+  [{}
+    phon	 & </\emph{jean}/> \\
+    synsem &  [{synsem}
+	      local & [{loc}
+			categorie & [{cat}
+				      tete      & nom\\
+				      valence   & [{val}
+						  SPR   & <>\\
+						  SUJ   & <>\\
+						  COMPS & <>\\
+						  ]\\
+				      sous-cat  & <>\\
+				    ]\\
+			contenu   & [{cont}
+				      indice i  & [{}
+						    personne & 3\textsuperscript{ème}\\
+						    nombre   & sing\\
+						    genre    & masc\\
+						  ]\\
+				      restr     & \{ [{}
+						      reln  & nomin\\
+						      nom	  & paul\\
+						      arg	  & i\\
+						     ]\\
+						  \}
+				    ]\\
+		      ]
+	      ]
+  ]
+\end{avm}
+\caption{Entrée lexicale pour \emph{Jean}.\label{lex.jean}}
+\end{figure}
