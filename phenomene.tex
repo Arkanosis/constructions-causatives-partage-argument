@@ -101,7 +101,7 @@ Une telle structure ne permet pas d'illustrer les phénomènes auxquels nous avo
 
 Pour que les compléments du second verbe soient pronominalisés devant l'ensemble du groupe verbal, il faut que toutes les branches de l'arbre soient au même niveau.\\
 
-Au niveau sématique, enfin, on peut dire que le verbe \emph{faire} est une forme verbale qui exprime le fait que le sujet (par exemple \emph{Paul}) fait en sorte que d'autres fassent l'action à sa place.
+Au niveau sémantique, enfin, on peut dire que le verbe \emph{faire} est une forme verbale qui exprime le fait que le sujet (par exemple \emph{Paul}) fait en sorte que d'autres fassent l'action à sa place.
 
 Le sujet grammatical est appelé le 'causer' et le groupe nominal qui est le sujet initial du second verbe est appelé le 'causee'.
 Dans l'exemple 1 (\autoref{phenomene.exemples}), c'est Paul qui est le 'causer' et c'est l'enfant qui est le 'causee'.
@@ -147,12 +147,15 @@ On a donc la structure suivante :
 			sous-cat  < V [ MODE = inf, sous-cat = L ] > + L
 
 \end{avm}
-\caption{'L' représente la liste des arguments du verbe à l'infinitif.
-  Le verbe \emph{faire} sélectionne le verbe à l'infinitif et remonte dans sa liste de sous catégorisation tous les arguments du verbe à l'infinitif.
-Par exemple, si le verbe à l'infinitif a dans sa sous catégorisation : <SN, SN>, \emph{faire} aura dans la sienne : <V, SN, SN>.
-Après l'aspiration des compléments, la séquence \emph{faire} + verbe à l'infinitif se comporte comme un verbe transitif.
-La liste de sous catégorisation du verbe à l'infinitif pourra rester non saturée car la branche de cet élément n'est pas une branche tête.}
+\caption{Sous-catégorisation de \emph{faire} comprenant un verbe à l'infinitif et la sous-catégorisation de ce verbe ('L' représente la liste des arguments du verbe à l'infinitif)}
 \end{figure}
+
+
+Le verbe \emph{faire} sélectionne le verbe à l'infinitif et remonte dans sa liste de sous catégorisation tous les arguments du verbe à l'infinitif.
+Par exemple, si le verbe à l'infinitif a dans sa sous catégorisation : <SN, SN>, \emph{faire} aura dans la sienne : <V, SN, SN>.
+
+Après l'aspiration des compléments, la séquence \emph{faire} + verbe à l'infinitif se comporte comme un verbe transitif.
+La liste de sous catégorisation du verbe à l'infinitif pourra rester non saturée car la branche de cet élément n'est pas une branche tête.\\
 
 On dit généralement que les langages se distinguent dans leur manière de représenter les arguments.
 
@@ -184,6 +187,7 @@ On peut montrer avec les portions de structures ci-dessous la différence qu'il 
                    ]
   ]
 \end{avm}
+\caption{Verbe non cliticisé, attendant deux compléments}
 \end{figure}
 \begin{figure}[ht]
 \begin{avm}
@@ -199,9 +203,11 @@ On peut montrer avec les portions de structures ci-dessous la différence qu'il 
              ]
   ]
 \end{avm}
-\caption{On notera que HPSG permet aux phénomènes de valence d'être traités dans le lexique.
-La valence désigne tous les éléments avec lesquels le signe doit se combiner pour être complet.}
+\caption{Verbe cliticisé (portant un clitique, soustrait de la liste des compléments)}
 \end{figure}
+
+On notera que HPSG permet aux phénomènes de valence d'être traités dans le lexique.
+La valence désigne tous les éléments avec lesquels le signe doit se combiner pour être complet.\\
 
 Les arguments qui sont extraits ne sont pas représentés par des branches vides, c'est un des principes de HPSG : il ne doit pas y avoir de branche vide.
 A la place, les arguments extraits sont enregistrés dans l'entrée lexicale.
