@@ -177,17 +177,27 @@ On peut montrer avec les portions de structures ci-dessous la différence qu'il 
 
 \begin{figure}[ht]
 \begin{avm}
-
-			<Phon = \ mange \ \\
-			Synsem = Cat = [sous-cat = < SN {1}, SN {2} > ] >
+  [{}
+    Phon & </\emph{mange}/> \\
+    Synsem = Cat & [{cat}
+                    sous-cat & < SN {1}, SN {2} >
+                   ]
+  ]
 \end{avm}
 \end{figure}
 \begin{figure}[ht]
 \begin{avm}
-			<Phon = \ le mange \ \\
-			Synsem = [Local = Cat = [sous-cat = < SN {1} > ] \\
-					  Non local = [CL= < SN {2} > ] ] >
-
+  [{}
+    Phon & </\emph{le mange}/> \\
+    Synsem & [{synsem}
+              Local = Cat & [{cat}
+                             sous-cat < SN {1} >
+                            ] \\
+              Non local & [{nloc}
+                           CL < SN {2} >
+                          ]
+             ]
+  ]
 \end{avm}
 \caption{On notera que HPSG permet aux phénomènes de valence d'être traités dans le lexique.
 La valence désigne tous les éléments avec lesquels le signe doit se combiner pour être complet.}
