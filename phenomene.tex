@@ -13,6 +13,29 @@ Dans cette première partie nous allons succesivement présenter le phénomène 
 
 Tout d'abord, nous allons rendre compte des propriétés de la langue exposées dans le corpus.\\
 
+\begin{figure}[ht]
+\begin{enumerate}
+  \item Paul fait dormir l'enfant
+  \item Paul le fait dormir
+  \item Paul fait traduire le roman à son fils
+  \item Paul le fait traduire à son fils
+  \item Paul le lui fait traduire
+  \item Paul lui fait traduire le roman
+  \item Paul fait lire le livre à Jean
+  \item Paul le fait lire à Jean
+  \item Paul lui fait lire le livre
+  \item Paul le lui fait lire
+  \item *Paul fait l'enfant dormir
+  \item *Paul fait le dormir
+  \item *Paul fait le roman traduire à son fils
+  \item *Paul fait lire à Jean le roman
+  \item *Paul fait le traduire
+  \item *Paul lui fait dormir
+  \item *Paul le fait traduire le livre
+\end{enumerate}
+\caption{Exemples \label{phenomene.exemples}}
+\end{figure}
+
 On remarque que toutes les phrases sont construites avec le verbe \emph{faire} qui est conjugué et avec un autre verbe qui est à l'infinitif.
 On parle de construction causative.
 
@@ -64,38 +87,38 @@ Pour résumer, on peut dire que le sujet initial du second verbe devient le COD 
 
 On peut même préciser que ce sont des verbes transitifs directs, c'est-à-dire qu'ils ne sont pas séparés de leurs compléments par des prépositions.\\
 
-\begin{figure}[ht]
-\begin{enumerate}
-  \item Paul fait dormir l'enfant
-  \item Paul le fait dormir
-  \item Paul fait traduire le roman à son fils
-  \item Paul le fait traduire à son fils
-  \item Paul le lui fait traduire
-  \item Paul lui fait traduire le roman
-  \item Paul fait lire le livre à Jean
-  \item Paul le fait lire à Jean
-  \item Paul lui fait lire le livre
-  \item Paul le lui fait lire
-  \item *Paul fait l'enfant dormir
-  \item *Paul fait le dormir
-  \item *Paul fait le roman traduire à son fils
-  \item *Paul fait lire à Jean le roman
-  \item *Paul fait le traduire
-  \item *Paul lui fait dormir
-  \item *Paul le fait traduire le livre
-\end{enumerate}
-\caption{Exemples \label{phenomene.exemples}}
-\end{figure}
-
 Selon que \emph{faire} sera couplé avec un verbe transitif ou avec un verbe intransitif, il faudra analyser différement le fonctionnement du groupe verbal.\\
 
 Puisque, comme on vient de le voir, les pronoms clitiques se placent devant l'ensemble du prédicat complexe, cela suppose l'existence d'une structure plate dont voici un modèle : \\
 
 % TODO FIXME FAIRE UNE STRUCTURE PLATE
+\begin{figure}[ht]
+\begin{tikzpicture}
+  \node{SV}
+    child {node {V}}
+    child {node {Vinf}}
+    child {node {SN}}
+  ;
+\end{tikzpicture}
+\caption{Exemple de structure plate.}
+\end{figure}
 
 Cette structure s'oppose à la structure hiérarchique suivante :\\
 
 % TODO FIXME FAIRE UNE STRUCTURE HIERARCHIQUE
+\begin{figure}[ht]
+\begin{tikzpicture}
+  \node{SV}
+    child {node {V}}
+    child {node {SV}
+      child {node {V}}
+      child {node {SN}}
+    }
+  ;
+\end{tikzpicture}
+\caption{Exemple de structure hiérarchique.}
+\end{figure}
+
 
 Une telle structure ne permet pas d'illustrer les phénomènes auxquels nous avons à faire car dans un tel cas, le verbe \emph{faire} ne pourrait pas récupérer les arguments du second verbe et en faire, notamment, ses clitiques.
 
@@ -162,7 +185,7 @@ La liste de sous catégorisation du verbe à l'infinitif pourra rester non satur
 On dit généralement que les langages se distinguent dans leur manière de représenter les arguments.
 
 HPSG a l'avantage de distinguer à la fois la sous catégorisation et la valence d'un verbe.
-La présence d'un traut représentant la valence et d'un autre trait représentant la sous catégorisation permet d'enregistrer des décalages entre les arguments attendus et ceux qui sont réalisés.
+La présence d'un trait représentant la valence et d'un autre trait représentant la sous catégorisation permet d'enregistrer des décalages entre les arguments attendus et ceux qui sont réalisés.
 En formulant des contraintes, HPSG autorise donc, notamment quand il y a des affixes, des manipulations à ce niveau.\\
 
 On distingue donc les mots simples notés \emph{pl-wd} et les mots cliticisés \emph{cl-wd}.
@@ -176,7 +199,7 @@ Si un verbe porte un clitique, il change de type en devenant un v-cliticisé.
 Ce type permet à HPSG d'imposer des contraintes très utiles.
 
 Les mots de type v-cliticisé doivent avoir un complément soustrait de leur liste COMPS.
-Par conséquent, le complément n'apparait que dans la liste SOUS-CAT du verbe qui porte le clitique.
+Par conséquent, le complément n'apparaît que dans la liste SOUS-CAT du verbe qui porte le clitique.
 Cela permet de dire que le verbe n'attend plus ce complément puisqu'il le porte déjà sur lui.
 On peut montrer avec les portions de structures ci-dessous la différence qu'il existe entre un verbe transitif (\autoref{phenomene.nclit}) et le même verbe cliticisé (\autoref{phenomene.clit}) :\\
 
