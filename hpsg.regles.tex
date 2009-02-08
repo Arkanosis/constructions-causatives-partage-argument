@@ -5,7 +5,10 @@
 \begin{avm}
   [{}
     phon         & </\emph{fait}/> \\
-    synsem = Cat & [{} Sous-cat = < SN @{1}, V[{} Sous-cat < SN\[\emph{acc}\] @{2}> $\oplus$ @{4} ] @{3} + @{2} > ]
+    synsem = Cat & [{} Sous-cat = < SN @{1}, V[{}
+						TRANS & -\\
+						Sous-cat & < SN @{2}> $\oplus$ @{4} ] @{3}, @{2} >
+					      ]
   ]
 \end{avm}\\
 $\Downarrow$\\
@@ -13,12 +16,15 @@ $\Downarrow$\\
   [{}
     phon   & </\emph{le-fait}/> \\
     synsem & [{}
-	      Local = Cat & [{} Sous-cat = < SN @{1}, V [{} Sous-cat @{4} ], @{3} > ]\\
-	      Non-Local   & [{} CL = { SN\[\emph{acc}\] @{2} } ]\\
+	      Local = Cat & [{} Sous-cat = < SN @{1}, V [{}
+						          TRANS    & -\\
+							  Sous-cat & @{4}
+							] @{3} > ]\\
+	      Non-Local   & [{} CL = < SN\[\emph{acc}\] @{2} > ]\\
              ]\\
   ]
 \end{avm}
-\caption{Règle lexicale pour la cliticisation avec un pronom COD.\label{regle.cl.cod}}
+\caption{Règle lexicale pour la cliticisation en pronom COD avec un verbe intransitif à l'infinitif.\label{regle.cl.cod}}
 \end{figure}
 
 \begin{figure}[ht]
@@ -26,18 +32,53 @@ $\Downarrow$\\
 \begin{avm}
   [{}
     phon         & </\emph{fait}/> \\
-    synsem = Cat & [{} Sous-cat = < SN\[\emph{dat}\] @{1}, SN @{2} > ]
+    synsem = Cat & [{} Sous-cat = < SN @{1}, V[{}
+						TRANS & +\\
+						Sous-cat & < SN @{2}, SN\[\emph{acc}\] @{5}> $\oplus$ @{4} ] @{3}, SN\[\emph{acc}\] @{5}, SN\[\emph{dat}\] @{2} >
+					      ]
   ]
-$\Rightarrow$
+\end{avm}\\
+$\Downarrow$\\
+\begin{avm}
+  [{}
+    phon   & </\emph{le-fait}/> \\
+    synsem & [{}
+	      Local = Cat & [{} Sous-cat = < SN @{1}, V [{}
+						          TRANS    & +\\
+							  Sous-cat & < SN\[\emph{acc}\] @{5} > $\oplus$ @{4}
+							] @{3}, SN\[\emph{dat}\] @{2} > ]\\
+	      Non-Local   & [{} CL = < SN\[\emph{acc}\] @{5} > ]\\
+             ]\\
+  ]
+\end{avm}
+\caption{Règle lexicale pour la cliticisation en pronom COD avec un verbe transitif à l'infinitif.\label{regle.cl.cod.trans}}
+\end{figure}
+
+\begin{figure}[ht]
+\centering
+\begin{avm}
+  [{}
+    phon         & </\emph{fait}/> \\
+    synsem = Cat & [{} Sous-cat = < SN @{1}, V[{}
+						TRANS & +\\
+						Sous-cat & < SN @{2}, SN\[\emph{acc}\] @{5}> $\oplus$ @{4} ] @{3}, SN\[\emph{acc}\] @{5}, SN\[\emph{dat}\] @{2} >
+					      ]
+  ]
+\end{avm}\\
+$\Downarrow$\\
+\begin{avm}
   [{}
     phon   & </\emph{lui-fait}/> \\
     synsem & [{}
-	      Local = Cat & [{} Sous-cat = < SN\[\emph{dat}\] @{1} > ]\\
-	      Non-Local   & [{} CL = { SN @{2} } ]\\
+	      Local = Cat & [{} Sous-cat = < SN @{1}, V [{}
+						          TRANS    & +\\
+							  Sous-cat & < SN\[\emph{acc}\] @{5} > $\oplus$ @{4}
+							] @{3}, SN\[\emph{acc}\] @{5} > ]\\
+	      Non-Local   & [{} CL = < SN\[\emph{dat}\] @{2} > ]\\
              ]\\
   ]
 \end{avm}
-\caption{Règle lexicale pour la cliticisation avec un pronom COI.\label{regle.cl.coi}}
+\caption{Règle lexicale pour la cliticisation en pronom COI avec un verbe transitif à l'infinitif.\label{regle.cl.coi}}
 \end{figure}
 
 \begin{figure}[ht]
@@ -45,16 +86,66 @@ $\Rightarrow$
 \begin{avm}
   [{}
     phon         & </\emph{fait}/> \\
-    synsem = Cat & [{} Sous-cat = < SN\[\emph{dat}\] @{1}, SN @{2} > ]
+    synsem = Cat & [{} Sous-cat = < SN @{1}, V[{}
+						TRANS & +\\
+						Sous-cat & < SN @{2}, SN\[\emph{acc}\] @{5}> $\oplus$ @{4} ] @{3}, SN\[\emph{acc}\] @{5}, SN\[\emph{dat}\] @{2} >
+					      ]
   ]
-$\Rightarrow$
+\end{avm}\\
+$\Downarrow$\\
+\begin{avm}
   [{}
     phon   & </\emph{le-lui-fait}/> \\
     synsem & [{}
-	      Local = Cat & [{} Sous-cat = < SN\[\emph{dat}\] @{1} > ]\\
-	      Non-Local   & [{} CL = { SN @{2} } ]\\
+	      Local = Cat & [{} Sous-cat = < SN @{1}, V [{}
+						          TRANS    & +\\
+							  Sous-cat & < SN\[\emph{acc}\] @{5} > $\oplus$ @{4}
+							] @{3} > ]\\
+	      Non-Local   & [{} CL = < SN\[\emph{acc}\] @{2} , SN\[\emph{dat}\] @{5} > ]\\
              ]\\
   ]
-\end{avm}
-\caption{Règle lexicale pour la cliticisation avec un propose COD et un pronom COI.\label{regle.cl.cod.coi}}
+\end{avm}\\
+Cette règle gère l'ordre des pronoms clitiques en mettant le pronom COD avant le pronom COI.
+\caption{Règle lexicale pour la cliticisation en pronom COD et COI avec un verbe transitif à l'infinitif.\label{regle.cl.cod.coi}}
 \end{figure}
+
+\begin{figure}[ht]
+\centering
+\begin{avm}
+  [{}
+    phon	 & </\emph{nom}/> \\
+    synsem =
+	      local =
+			categorie & [{cat}
+				      tete      & [{tete}
+				      		  PART & nom]\\
+				      valence   & [{val}
+						  SPR   & <@{1}>\\
+						  SUJ   & <>\\
+						  COMPS & <@{2}>\\
+						  ]\\
+				      sous-cat  & <@{1}, @{2}>\\
+				    ]\\
+  ]
+\end{avm}\\
+$\Downarrow$\\
+\begin{avm}
+  [{}
+    phon	 & </\emph{det}-\emph{nom}/> \\
+    synsem =
+	      local =
+			categorie & [{cat}
+				      tete      & [{tete}
+				      		  PART & nom]\\
+				      valence   & [{val}
+						  SPR   & <>\\
+						  SUJ   & <>\\
+						  COMPS & <@{2}>\\
+						  ]\\
+				      sous-cat  & <@{2}>\\
+				    ]\\
+  ]
+\end{avm}
+\caption{Règles lexicale pour la spécification d'un nom commun.}
+\end{figure}
+
