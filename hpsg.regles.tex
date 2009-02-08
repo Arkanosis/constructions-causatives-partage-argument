@@ -1,0 +1,60 @@
+\subsection{Les règles lexicales}
+
+\begin{figure}[ht]
+\centering
+\begin{avm}
+  [{}
+    phon         & </\emph{fait}/> \\
+    synsem = Cat & [{} Sous-cat = < SN @{1}, V[{} Sous-cat < SN\[\emph{acc}\] @{2}> $\oplus$ @{4} ] @{3} + @{2} > ]
+  ]
+\end{avm}\\
+$\Downarrow$\\
+\begin{avm}
+  [{}
+    phon   & </\emph{le-fait}/> \\
+    synsem & [{}
+	      Local = Cat & [{} Sous-cat = < SN @{1}, V [{} Sous-cat @{4} ], @{3} > ]\\
+	      Non-Local   & [{} CL = { SN\[\emph{acc}\] @{2} } ]\\
+             ]\\
+  ]
+\end{avm}
+\caption{Règle lexicale pour la cliticisation avec un pronom COD.\label{regle.cl.cod}}
+\end{figure}
+
+\begin{figure}[ht]
+\centering
+\begin{avm}
+  [{}
+    phon         & </\emph{fait}/> \\
+    synsem = Cat & [{} Sous-cat = < SN\[\emph{dat}\] @{1}, SN @{2} > ]
+  ]
+$\Rightarrow$
+  [{}
+    phon   & </\emph{lui-fait}/> \\
+    synsem & [{}
+	      Local = Cat & [{} Sous-cat = < SN\[\emph{dat}\] @{1} > ]\\
+	      Non-Local   & [{} CL = { SN @{2} } ]\\
+             ]\\
+  ]
+\end{avm}
+\caption{Règle lexicale pour la cliticisation avec un pronom COI.\label{regle.cl.coi}}
+\end{figure}
+
+\begin{figure}[ht]
+\centering
+\begin{avm}
+  [{}
+    phon         & </\emph{fait}/> \\
+    synsem = Cat & [{} Sous-cat = < SN\[\emph{dat}\] @{1}, SN @{2} > ]
+  ]
+$\Rightarrow$
+  [{}
+    phon   & </\emph{le-lui-fait}/> \\
+    synsem & [{}
+	      Local = Cat & [{} Sous-cat = < SN\[\emph{dat}\] @{1} > ]\\
+	      Non-Local   & [{} CL = { SN @{2} } ]\\
+             ]\\
+  ]
+\end{avm}
+\caption{Règle lexicale pour la cliticisation avec un propose COD et un pronom COI.\label{regle.cl.cod.coi}}
+\end{figure}
