@@ -141,10 +141,8 @@
 			contenu   & [{cont}
 				      indice    & s\\
 				      restr     & \{ [{}
-						      reln	& cause\\
-						      agent	& i\\
-						      patient	& j\\
-						      resultat	& @{1}
+						      reln	& dormir\\
+						      dormeur	& @{1}
 						     ]\\
 						  \}
 				    ]\\
@@ -158,16 +156,48 @@
 % TODO l'
 % TODO enfant
 % TODO le (pronom)
-% TODO traduire
+
+\begin{figure}[ht]
+\centering
+\begin{avm}
+  [{}
+    phon	 & </\emph{traduire}/> \\
+    synsem &  [{synsem}
+	      local & [{loc}
+			categorie & [{cat}
+				      tete      & [{}
+						    verbe\\
+						    mode  & infinitif
+						  ]\\
+				      valence   & [{val}
+						  suj   & <SN @{1}>\\
+						  comps & <@{2}>\\
+						  ]\\
+				      sous-cat  & <SN @{1}, SN @{2}> \\
+				    ]\\
+			contenu   & [{cont}
+				      indice    & s\\
+				      restr     & \{ [{}
+						      reln	& traduire\\
+						      agent	& @{1}\\
+						      objet	& @{2}
+						     ]\\
+						  \}
+				    ]\\
+		      ]
+	      ]
+  ]
+\end{avm}
+\caption{Entrée lexicale pour \emph{traduire}.\label{lex.traduire}}
+\end{figure}
+
 % TODO le (déterminant)
 % TODO roman
 % TODO à
 % TODO son
 % TODO fils
-
-
-
-% TODO 5 -> 10
+% TODO lui
+% TODO livre
 
 \begin{figure}[ht]
 \centering
