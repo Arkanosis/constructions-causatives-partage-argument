@@ -7,13 +7,13 @@
 
 Dans cette première partie nous allons succesivement présenter le phénomène linguistique, les motivations théoriques de l'analyse HPSG, les grands principes de l'analyse et le dispositif formel.
 
-\newpage
-
 \subsection{Le phénomène linguistique : les propriétés de la langue}
 
 Tout d'abord, nous allons rendre compte des propriétés de la langue exposées dans le corpus.\\
 
 \begin{figure}[ht]
+\centering
+\begin{minipage}{.5\textwidth}
 \begin{enumerate}
   \item Paul fait dormir l'enfant
   \item Paul le fait dormir
@@ -34,6 +34,7 @@ Tout d'abord, nous allons rendre compte des propriétés de la langue exposées 
   \item *Paul le fait traduire le livre
 \end{enumerate}
 \caption{Exemples \label{phenomene.exemples}}
+\end{minipage}
 \end{figure}
 
 On remarque que toutes les phrases sont construites avec le verbe \emph{faire} qui est conjugué et avec un autre verbe qui est à l'infinitif.
@@ -129,7 +130,7 @@ Au niveau sémantique, enfin, on peut dire que le verbe \emph{faire} est une for
 Le sujet grammatical est appelé le 'causer' et le groupe nominal qui est le sujet initial du second verbe est appelé le 'causee'.
 Dans l'exemple 1 (\autoref{phenomene.exemples}), c'est Paul qui est le 'causer' et c'est l'enfant qui est le 'causee'.
 
-\newpage
+
 
 \subsection{Le phénomène linguistique : les difficultés empiriques}
 
@@ -144,7 +145,6 @@ On peut en énumérer quelques unes :\\
     En plus de boulverser l'ordre canonique des compléments, cette modification fait aussi varier la forme des pronoms clitiques.
 \end{itemize}
 
-\newpage
 
 \subsection{Les motivations théoriques de l'analyse HPSG, les grands principes de l'analyse et le dispositif formel}
 
@@ -167,6 +167,8 @@ On a donc la structure suivante :
 
 \begin{figure}[ht]
 \centering
+\begin{minipage}{.8\textwidth}
+\centering
 \begin{avm}
 			sous-cat  < V [{v}
                                        MODE & inf\\
@@ -174,6 +176,7 @@ On a donc la structure suivante :
                                       ] > + L
 \end{avm}
 \caption{Sous-catégorisation de \emph{faire} comprenant un verbe à l'infinitif et la sous-catégorisation de ce verbe ('L' représente la liste des arguments du verbe à l'infinitif)}
+\end{minipage}
 \end{figure}
 
 
