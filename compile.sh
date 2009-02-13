@@ -4,6 +4,10 @@ subscribers=(arkanosis@gmail.com)
 
 repeat 3; do
   pdflatex fs.tex
+
+  if [ $? -ne 0 ]; then
+      return
+  fi
 done
 
 filename="Formalismes syntaxiques.`svn info | sed -ne 's/Revision: \([[:digit:]]\+\)/\1/p'`.pdf"

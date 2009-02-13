@@ -1,4 +1,5 @@
 \subsection{Arbres décorés}
+
 \begin{figure}[ht]
 \centering
 \begin{tikzpicture}[node distance=5cm]
@@ -14,6 +15,7 @@
 
   \node[below left of=0] (1) {
     \begin{avm}
+      @{1}
       [{}
 	tete  & nom\\
 	spr   & <>\\
@@ -34,6 +36,7 @@
 
   \node[below of=2] (4) {
     \begin{avm}
+      @{3}
       [{}
 	tete & verbe\\
 	suj  & @{1}\\
@@ -45,12 +48,14 @@
 
   \node[left of=4] (3) {
     \begin{avm}
+      @{2}
       [{} tete & cl ]
     \end{avm}
   } edge node[left] {NHD} (2);
 
   \node[right of=4] (5) {
     \begin{avm}
+      @{4}
       [{}
 	tete   & inf\\
 	suj    & <>\\
@@ -59,6 +64,117 @@
       ]
     \end{avm}
   } edge node[right] {NHD} (2);
+
+  \node[below of=1] (6) {
+    Paul
+  } edge (1);
+
+  \node[below of=3] (7) {
+    le
+  } edge (3);
+
+  \node[below of=4] (8) {
+    fait
+  } edge (4);
+
+  \node[below of=5] (9) {
+    dormir
+  } edge (5);
 \end{tikzpicture}
-\caption{Exemple de structure plate.}
+\caption{Arbre décoré pour la phrase \emph{Paul le fait dormir}\label{arb.plfd}}
+\end{figure}
+
+\begin{figure}[ht]
+\centering
+\begin{tikzpicture}[node distance=5cm]
+  \node (0) {
+    \begin{avm}
+      [{}
+	tete  & @{4}\\
+	suj   & <>\\
+	comps & <>\\
+      ]
+    \end{avm}
+  };
+
+  \node[below left of=0] (1) {
+    \begin{avm}
+      @{1}
+      [{}
+	tete  & nom\\
+	spr   & <>\\
+	comps & <>\\
+      ]
+    \end{avm}
+  } edge node[left] {NHD} (0);
+
+  \node[below right of=0] (2) {
+    \begin{avm}
+      [{}
+	tete  & @{4}\\
+	suj   & <@{1}>\\
+	comps & <>\\
+      ]
+    \end{avm}
+  } edge node[right] {HD} (0);
+
+  \node[below of=2] (11) {
+    \begin{avm}
+      @{3}
+      [{} tete & cl ]
+    \end{avm}
+  } edge node[left] {NHD} (2);
+
+  \node[left of=11] (3) {
+    \begin{avm}
+      @{2}
+      [{} tete & cl ]
+    \end{avm}
+  } edge node[left] {NHD} (2);
+
+  \node[right of=11] (4) {
+    \begin{avm}
+      @{4}
+      [{}
+	tete & verbe\\
+	suj  & @{1}\\
+	comps & <@{5}>\\
+	cl    & <@{2}, @{3}>\\
+      ]
+    \end{avm}
+  } edge node[left] {HD} (2);
+
+  \node[right of=4] (5) {
+    \begin{avm}
+      @{5}
+      [{}
+	tete   & inf\\
+	suj    & <>\\
+	comps  & <>\\
+	arg-st & <>\\
+      ]
+    \end{avm}
+  } edge node[right] {NHD} (2);
+
+  \node[below of=1] (6) {
+    Paul
+  } edge (1);
+
+  \node[below of=3] (7) {
+    le
+  } edge (3);
+
+  \node[below of=11] (10) {
+    lui
+  } edge (11);
+
+  \node[below of=4] (8) {
+    fait
+  } edge (4);
+
+  \node[below of=5] (9) {
+    traduire
+  } edge (5);
+\end{tikzpicture}
+\caption{Arbre décoré pour la phrase \emph{Paul le lui fait traduire}\label{arb.pllft}}
 \end{figure}
